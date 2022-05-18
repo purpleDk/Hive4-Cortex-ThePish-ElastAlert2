@@ -39,7 +39,7 @@ services:
   #-------------------------------------
   cassandra:
     container_name: cassandra
-    image: cassandra:3.11
+    image: cassandra:${CASSANDRA_VERSION}
     restart: unless-stopped
     hostname: cassandra
     environment:
@@ -48,8 +48,6 @@ services:
       - CASSANDRA_CLUSTER_NAME=thp
     volumes:
       - ./cassandra/data:/var/lib/cassandra/data
-    #networks:
-    #  - backend
   #-------------------------------------  
   cortex:
     image: thehiveproject/cortex:latest
@@ -69,7 +67,6 @@ services:
       - ./cortex/application.conf:/etc/cortex/application.conf
       - '/var/run/docker.sock:/var/run/docker.sock'
       - ./cortex/log/:/var/log/cortex
-      #- /tmp:/tmp
       - ./cortex/Cortex-Analyzers:/opt/cortex/analyzers
       - ./cortex/Cortex-Analyzers/analyzers.json:/opt/cortex/analyzers/analyzers.json
     privileged: true
@@ -92,13 +89,6 @@ services:
     command:
       --cortex-port 9001
       --cortex-keys ${CORTEX_KEY}
-      #--es-uri http://elasticsearch:9200
-      #--no-config 
-      #--no-config-secret
-     
-    #networks:
-    #  - proxy
-    #  - backend
 
   #-------------------------------------    
   ubuntu:

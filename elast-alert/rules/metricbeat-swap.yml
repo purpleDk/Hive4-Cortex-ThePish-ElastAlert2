@@ -19,7 +19,7 @@ min_doc_count: 1
 bucket_interval:
   minutes: 5
 
-max_threshold: 0.30 # meti 0.30 pq se for 0.25, recebo muitos avisos 0.25 =25% 0.30=30% (percentagem usada bo swap)
+max_threshold: 0.50 # meti 0.30 pq se for 0.25, recebo muitos avisos 0.25 =25% 0.30=30% (percentagem usada bo swap)
 
 filter:
 - term:

@@ -1,6 +1,5 @@
-# ignore all logs
-cortex/log
 cassandra/
+cortex/log
+cortex/Cortex-Analyzers
 thehive/data
 thehive/index
-cortex/Cortex-Analyzers
