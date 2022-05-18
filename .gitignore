@@ -1,5 +1,5 @@
 # ignore all logs
-*.log
+cortex/log
 cassandra/
 thehive/data
 thehive/index
