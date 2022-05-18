@@ -9,7 +9,7 @@ Building a environment with elasticsearch, alerting with elastalert2, send that 
 If you have a Windowns computer or VM, first you need to install winlogbeat, on docker doesn't work
 1. winlogbeat setup --dashboards
 
-If you have a linux or VM computer you, first you need to install auditbeat, on docker doesn't work
+If you have a linux computer or VM  you, first you need to install auditbeat, on docker doesn't work
 1. auditbeat setup --dashboards
 
 
