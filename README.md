@@ -1,17 +1,18 @@
 # hive4-cortex-elastalert2-elk
 Building a environment with elasticsearch, alerting with elastalert2, send that alerts to The Hive, analyse with cortex
 
-If you want the default dashboards of the BEATS, you should run this commands on ubuntu machine!
-    filebeat setup --dashboards
-    metricbeat setup --dashboards
-    packetbeat setup --dashboards
+If you want the default dashboards of the BEATS, you should run this commands on ubuntu machine:
+filebeat setup --dashboards
+metricbeat setup --dashboards
+packetbeat setup --dashboards
 
 If you have a Windowns computer or VM you can use ->
-    First you need to install winlogbeat on the linux computer or VM, on docker doesn't work
-    winlogbeat setup --dashboards
+First you need to install winlogbeat on the linux computer or VM, on docker doesn't work
+winlogbeat setup --dashboards
+
 If you have a linux or VM computer you can use ->
-    First you need to install auditbeat on the linux computer or VM, on docker doesn't work
-    auditbeat setup --dashboards
+First you need to install auditbeat on the linux computer or VM, on docker doesn't work
+auditbeat setup --dashboards
 
 
 The Hive | Cortex | ElastAlert2
