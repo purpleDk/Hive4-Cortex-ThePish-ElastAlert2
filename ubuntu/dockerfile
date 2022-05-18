@@ -1,0 +1,66 @@
+FROM ubuntu
+
+RUN apt-get update && apt-get -y upgrade \
+  && apt-get install -y \
+  curl \
+  && apt-get install -y \
+  nano \
+  && apt-get install -y \
+  nginx \
+  && apt-get install -y \
+  iputils-ping \
+  && rm -rf /var/lib/apt/lists/*
+
+#FileBeat 
+RUN curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.17.1-amd64.deb \
+  && dpkg -i filebeat-7.17.1-amd64.deb \
+  && filebeat modules enable system \
+  && filebeat modules enable nginx 
+
+#MetricBeat
+RUN curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.17.1-amd64.deb \
+  && dpkg -i metricbeat-7.17.1-amd64.deb \
+  && metricbeat modules enable system \
+  && metricbeat modules enable nginx 
+
+#HeartBeat
+RUN curl -L -O https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-7.17.1-amd64.deb \
+  && dpkg -i heartbeat-7.17.1-amd64.deb 
+
+#PacketBeat
+RUN curl -L -O https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-7.17.1-amd64.deb \
+  && dpkg -i packetbeat-7.17.1-amd64.deb
+
+#AuditBeat
+#RUN curl -L -O https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-7.17.1-amd64.deb \
+#  && dpkg -i auditbeat-7.17.1-amd64.deb
+
+
+#----Copy Files-----
+#Bash script file
+COPY my-config/start.sh /tmp/start.sh
+#Nginx
+COPY my-config/default /etc/nginx/sites-enabled/
+#FileBeat
+COPY --chown=root:root my-config/filebeat.yml /etc/filebeat/filebeat.yml
+#MetricBeat
+COPY --chown=root:root my-config/metricbeat.yml /etc/metricbeat/metricbeat.yml
+#HeartBeat
+COPY --chown=root:root my-config/heartbeat.yml /etc/heartbeat/heartbeat.yml
+#PacketBeat
+COPY --chown=root:root my-config/packetbeat.yml /etc/packetbeat/packetbeat.yml
+
+#----Removing Files----
+RUN  rm /filebeat-7.17.1-amd64.deb \
+  && rm /metricbeat-7.17.1-amd64.deb \ 
+  && rm /heartbeat-7.17.1-amd64.deb \ 
+  && rm /packetbeat-7.17.1-amd64.deb 
+
+
+EXPOSE 80
+
+CMD ["sleep","infinity"]
+
+
+
+

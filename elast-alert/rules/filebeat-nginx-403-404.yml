@@ -1,0 +1,87 @@
+es_host: elasticsearch
+es_port: 9200
+name: Filebeat-Rule-nginx-403-404
+# Type of alert.
+type: any
+# Index to search, wildcard supported
+index: filebeat*
+
+#frequency
+#num_events: 5
+
+#timeframe:
+#  hours: 4
+
+filter:
+  - terms:
+      http.response.status_code: [403, 404]
+#  - terms:
+#      status_code: [403,404]
+#  - query:
+#    query_string:
+#      query: "status_code: 404 "
+#
+include: ["timestamp","http.response.status_code","url","user_agent.name","source"] # ,"url","user_agent.name","source"
+alert_text: "Alerts on the Filebeat Nginx 403 or 404 error.\n"
+alert_text_args: ["timestamp","status_code","url","user_agent.name","source"]
+
+
+# (Required)
+# The alert is use when a match is found
+#alert:
+#- "telegram"
+#telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
+#telegram_room_id: "@Filebeat"
+
+alert: hivealerter
+
+hive_connection:
+  hive_host: http://thehive
+  hive_port: 9000
+  hive_apikey: +rXSESD4UagRcLqrmLeBtt60/uHObFZH
+  #hive_proxies:
+  #  http: ''
+  #  https: ''
+
+hive_alert_config:
+  #customFields:
+  #  - name:  Filebeat Nginx 404
+  #    type: string
+  #    value: example
+  follow: True
+  severity: 2
+  status: 'New'
+  source: 'elastalert2'
+  description: 'Trying to acess restricted area'
+  #tags: ['tag1', 'tag2']
+  title: 'Filebeat Nginx 404'
+  tlp: 3
+  type: 'external'
+
+hive_observable_data_mapping:
+  #- domain: agent.hostname
+  #- domain: response.domain
+  - domain: url
+  - ip: source
+
+
+
+
+
+#alert: hivealerter
+#
+#hive_connection:
+#hive_host: http://thehive/
+#hive_port: 9000
+#hive_apikey: +rXSESD4UagRcLqrmLeBtt60/uHObFZH
+#
+#hive_alert_config:
+#  title: 'testing'
+#  type: 'external'
+#  source: 'elastalert'
+#  description: 'Sample description'
+#  severity: 2
+#  tags: ['tag1', 'test']
+#  tlp: 3
+#  status: 'New'
+#  follow: True

@@ -1,0 +1,54 @@
+filebeat.config.modules:
+  # Glob pattern for configuration loading
+  path: ${path.config}/modules.d/*.yml
+
+  # Set to true to enable config reloading
+  reload.enabled: true
+
+  # Period on which files under path should be checked for changes
+  reload.period: 10s
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+setup.dashboards.enabled: false #true funciona
+setup.template.overwrite: false
+
+setup.kibana:
+  host: "kibana:5601"
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  #- add_cloud_metadata: ~
+  #- add_docker_metadata: ~
+  #- add_kubernetes_metadata: 
+
+logging.level: info
+
+logging.selectors: ["*"]
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644
+
+filebeat.modules:
+- module: nginx
+  access:
+    enabled: true
+    tail_files: true 
+    paths:
+      - "/var/log/nginx/access.log"
+      - "/var/log/nginx/error.log"
+    #var.paths: ["/var/log/nginx/access.log"]
+    version: ingress-controller
+
+#setup.template.overwrite: false
+#setup.template.enable: false
+
+
+

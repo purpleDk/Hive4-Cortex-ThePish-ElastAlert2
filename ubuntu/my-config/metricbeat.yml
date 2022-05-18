@@ -1,0 +1,45 @@
+metricbeat.config.modules:
+  # Glob pattern for configuration loading
+  path: /etc/metricbeat/modules.d/*.yml
+
+  # Set to true to enable config reloading
+  reload.enabled: true
+
+  # Period on which files under path should be checked for changes
+  reload.period: 10s
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+setup.dashboards.enabled: false #true funciona
+setup.template.overwrite: false
+
+setup.kibana:
+  host: "kibana:5601"
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  #- add_cloud_metadata: ~
+  #- add_docker_metadata: ~
+  #- add_kubernetes_metadata: 
+
+logging.level: info
+
+logging.selectors: ["*"]
+logging.files:
+  path: /var/log/metricbeat
+  name: metricbeat
+  keepfiles: 7
+  permissions: 0644
+
+metricbeat.modules:
+- module: system
+  access:
+    enabled: true
+    
+    
+
+    

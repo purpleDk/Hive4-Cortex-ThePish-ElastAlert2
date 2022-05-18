@@ -1,0 +1,38 @@
+es_host: elasticsearch
+es_port: 9200
+
+
+name: Auditbeat-Login-Failure
+type: frequency
+
+index: auditbeat-*
+
+run_every:
+  minutes: 1
+
+num_events: 3
+
+timeframe:
+  minutes: 2
+
+#query_key: user.name
+
+filter:
+- term:
+    event.category: authentication
+- term:    
+    event.outcome: failure
+
+
+
+
+include: ["timestamp","event.action","event.outcome","source.ip","user.name"] # ,"url","user_agent.name","source"
+alert_text: "Alert, login failure attempt\n"
+alert_text_args: ["timestamp","event.action","event.outcome","source.ip","user.name"]
+      
+alert:
+- "telegram"
+telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
+telegram_room_id: "@Auditbeat"
+
+

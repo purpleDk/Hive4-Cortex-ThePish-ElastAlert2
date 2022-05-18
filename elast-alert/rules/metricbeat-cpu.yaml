@@ -1,0 +1,42 @@
+es_host: elasticsearch
+es_port: 9200
+
+name: Metricbeat CPU Spike Rule
+type: metric_aggregation
+
+index: metricbeat-*
+
+buffer_time:
+  minutes: 1
+
+metric_agg_key: system.cpu.user.pct #system.cpu.total.pct
+metric_agg_type: avg
+query_key: "@timestamp"
+doc_type: metricsets
+
+bucket_interval:
+  minutes: 1
+
+sync_bucket_interval: true
+#allow_buffer_time_overlap: true
+#use_run_every_query_size: true
+
+min_threshold: 0.0
+max_threshold: 1.0
+
+filter:
+- term:
+    metricset.name: cpu
+
+
+##alert_text: "Cpu Max threshold bigger then 0.3"
+##alert_text_args: ["@timestamp", "host.name", "host.ip", system.cpu.total.pct] # system.load.1]
+##alert_text_type: alert_text_only
+#
+#
+alert:
+- "telegram"
+telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
+telegram_room_id: "@Metricbeat"
+
+

@@ -1,0 +1,105 @@
+# =============================== Network device ===============================
+
+# Select the network interface to sniff the data. You can use the "any"
+# keyword to sniff on all connected interfaces.
+packetbeat.interfaces.device: any
+
+# The network CIDR blocks that are considered "internal" networks for
+# the purpose of network perimeter boundary classification. The valid
+# values for internal_networks are the same as those that can be used
+# with processor network conditions.
+packetbeat.interfaces.internal_networks:
+  - private
+
+# =================================== Flows ====================================
+
+packetbeat.flows:
+  # Enable Network flows. Default: true
+  #enabled: true
+
+  # Set network flow timeout. Flow is killed if no packet is received before being
+  # timed out.
+  timeout: 30s
+
+  # Configure reporting period. If set to -1, only killed flows will be reported
+  period: 10s
+
+# =========================== Transaction protocols ============================
+
+packetbeat.protocols:
+- type: icmp
+
+#- type: amqp
+#  ports: [5672]
+#
+#- type: cassandra
+#  ports: [9042]
+#
+#- type: dhcpv4
+#  ports: [67, 68]
+#
+#- type: dns
+#  ports: [53]
+
+  include_authorities: true
+  include_additionals: true
+
+- type: http
+  ports: [80]
+
+- type: memcache
+  ports: [11211]
+
+#- type: mysql
+#  ports: [3306,3307]
+#
+#- type: pgsql
+#  ports: [5432]
+#
+#- type: redis
+#  ports: [6379]
+#
+#- type: thrift
+#  ports: [9090]
+#
+#- type: mongodb
+#  ports: [27017]
+#
+#- type: nfs
+#  ports: [2049]
+#
+#- type: tls
+#  ports:
+#    - 443   # HTTPS
+#    - 993   # IMAPS
+#    - 995   # POP3S
+#    - 5223  # XMPP over SSL
+#    - 8443
+#    - 8883  # Secure MQTT
+#    - 9243  # Elasticsearch
+#
+- type: sip
+  ports: [5060]
+
+  # Parse the authorization headers
+  parse_authorization: true
+
+  # Parse body contents (only when body is SDP)
+  parse_body: true
+
+  # Preserve original contents in event.original
+  keep_original: true
+
+packetbeat.procs.enabled: false
+packetbeat.ignore_outgoing: false
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+
+setup.kibana:
+  host: "kibana:5601"
+
+setup.dashboards.enabled: true #true funciona
+setup.template.overwrite: false
+
+logging.to_files: true
+logging.files:
