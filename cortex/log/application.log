@@ -11592,3 +11592,884 @@ org.elastic4play.AuthorizationError: Insufficient rights to perform this action
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:52:06,591 [INFO] from org.reflections.Reflections in main - Reflections took 419 ms to scan 2 urls, producing 99 keys and 968 values 
+2022-05-18 13:52:06,844 [INFO] from module in main - Loading model class org.thp.cortex.models.WorkerModel
+2022-05-18 13:52:06,851 [INFO] from module in main - Loading model class org.thp.cortex.models.AuditModel
+2022-05-18 13:52:06,852 [INFO] from module in main - Loading model class org.thp.cortex.models.UserModel
+2022-05-18 13:52:06,853 [INFO] from module in main - Loading model class org.elastic4play.services.DBListModel
+2022-05-18 13:52:06,854 [INFO] from module in main - Loading model class org.thp.cortex.models.WorkerConfigModel
+2022-05-18 13:52:06,854 [INFO] from module in main - Loading model class org.thp.cortex.models.ReportModel
+2022-05-18 13:52:06,855 [INFO] from module in main - Loading model class org.thp.cortex.models.ArtifactModel
+2022-05-18 13:52:06,856 [INFO] from module in main - Loading model class org.thp.cortex.models.JobModel
+2022-05-18 13:52:06,857 [INFO] from module in main - Loading model class org.thp.cortex.models.OrganizationModel
+2022-05-18 13:52:06,858 [INFO] from module in main - Loading model class org.elastic4play.services.AttachmentModel
+2022-05-18 13:52:06,876 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.OAuth2Srv
+2022-05-18 13:52:06,876 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.LocalAuthSrv
+2022-05-18 13:52:06,877 [INFO] from module in main - Loading authentication module class org.elastic4play.services.auth.LdapAuthSrv
+2022-05-18 13:52:06,877 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.KeyAuthSrv
+2022-05-18 13:52:06,878 [INFO] from module in main - Loading authentication module class org.elastic4play.services.auth.ADAuthSrv
+2022-05-18 13:52:12,017 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-5 - Slf4jLogger started
+2022-05-18 13:52:20,289 [INFO] from org.thp.cortex.services.WorkerSrv in application-akka.actor.default-dispatcher-5 - New worker list:
+
+	IPVoid 1.0
+	SEKOIAIntelligenceCenter_Indicators 1.0
+	Shuffle 1.0
+	SEKOIAIntelligenceCenter_Context 1.0
+	HIBP_Query 2.0
+	CheckPoint_Unlock 1.0
+	DNSSinkhole 1.0
+	DomainToolsIris_Investigate 1.0
+	Autofocus_SearchJSON 1.0
+	DomainTools_Reputation 2.0
+	VirusTotal_GetReport 3.0
+	AMPforEndpoints_SCDAdd 1.0
+	MaxMind_GeoIP 4.0
+	Crowdstrike_Falcon_Custom_IOC_API 1.0
+	FileInfo 8.0
+	PaloAltoNGFW_block_external_user 1.0.0
+	CheckPoint_Lock 1.0
+	FireEyeiSight 1.0
+	Malwares_GetReport 1.0
+	Mnemonic_pDNS_Public 3.0
+	THOR_Thunderstorm_ScanSample 0.3.1
+	VirusTotal_Rescan 3.0
+	DomainTools_Risk 2.0
+	PassiveTotal_Osint 2.0
+	CIRCLPassiveDNS 2.0
+	CyberChef_FromHex 1.0
+	PaloAltoNGFW_block_port_for_external_communication 2.0.0
+	PassiveTotal_Passive_Dns 2.1
+	Shodan_Host 1.0
+	SendGrid 1.0
+	DomainTools_WhoisLookupUnparsed 2.0
+	Hashdd_Detail 2.0
+	PassiveTotal_Host_Pairs 2.0
+	Hunterio_DomainSearch 1.0
+	CyberChef_FromCharCode 1.0
+	MISPWarningLists 2.0
+	Gmail_BlockDomain 1.0
+	DomainTools_ReverseIPWhois 2.0
+	AbuseIPDB 1.0
+	TorProject 1.0
+	Redmine_Issue 1.0
+	CIRCLPassiveSSL 2.0
+	Inoitsu 1.0
+	Fortiguard_URLCategory 2.1
+	Splunk_Search_User_Agent 3.0
+	Yara 2.0
+	EmergingThreats_DomainInfo 1.0
+	DNSDB_DomainName 2.0
+	PhishTank_CheckURL 2.1
+	DNS-RPZ 1.0
+	MailIncidentStatus 1.0
+	CIRCLHashlookup 1.0
+	PaloAltoNGFW_block_internal_domain 2.0.0
+	StamusNetworks_HostID 1.0
+	IPinfo_Hosted_Domains 1.0
+	SpamhausDBL 1.0
+	SophosIntelix_GetReport 0.3
+	PassiveTotal_Trackers 2.0
+	ThreatResponse 1.0
+	VirusTotal_DownloadSample 3.0
+	Gmail_BlockSender 1.0
+	Maltiverse_Report 1.0
+	SophosIntelix_Submit_Dynamic 0.1
+	BackscatterIO_GetObservations 1.0
+	OTXQuery 2.0
+	Investigate_Sample 1.0
+	PaloAltoNGFW_unblock_port_for_internal_communication 1.0.0
+	MetaDefenderCloud_Reputation 1.0
+	Autofocus_SearchIOC 1.0
+	Splunk_Search_Mail_Email 3.0
+	LastInfoSec 1.0
+	Patrowl_GetReport 1.0
+	NSRL 1.0
+	AMPforEndpoints_MoveGUID 1.0
+	RT4-CreateTicket 1.0
+	PhishingInitiative_Scan 1.0
+	Mailer 1.0
+	C1fApp 1.0
+	Diario_Scan 1.0
+	RecordedFuture_risk 1.0
+	OpenCTI_SearchObservables 2.0
+	Nessus 2.0
+	KnowBe4 1.0
+	SecurityTrails_Passive_DNS 1.0
+	JoeSandbox_File_Analysis_Inet 2.0
+	Virusshare 2.0
+	Velociraptor_Flow 0.1
+	EmlParser 2.0
+	DomainTools_ReverseIP 2.0
+	Yeti 1.0
+	StaxxSearch 1.0
+	PaloAltoNGFW_unblock_external_domain 1.0.0
+	SinkDB 1.1
+	PaloAltoNGFW_unblock_external_IP_address 1.0.0
+	MalwareBazaar 1.0
+	DomainToolsIris_AddRiskyDNSTag 1.0
+	Robtex_Forward_PDNS_Query 1.0
+	WOT_Lookup 2.0
+	Elasticsearch_Analysis 1.0
+	Splunk_Search_Hash 3.0
+	Autofocus_GetSampleAnalysis 1.0
+	Virustotal_Downloader 0.1
+	DuoUnlockUserAccount 1.0
+	PaloAltoNGFW_unblock_internal_user 1.0.0
+	VirusTotal_Scan 3.0
+	EmergingThreats_IPInfo 1.0
+	Shodan_ReverseDNS 1.0
+	Shodan_Host_History 1.0
+	Wazuh 1.0
+	PassiveTotal_Whois_Details 2.0
+	Urlscan.io_Search 0.1.1
+	PaloAltoNGFW_block_external_IP_address 2.0.0
+	DomainTools_WhoisLookup 2.0
+	PaloAltoNGFW_block_internal_IP_address 2.0.0
+	GRR 0.1
+	Cyberprotect_ThreatScore 3.0
+	PaloAltoNGFW_block_external_domain 2.0.0
+	ZEROFOX_Close_alert 1.0
+	Minemeld 1.0
+	PassiveTotal_Malware 2.0
+	DomainTools_ReverseNameServer 2.0
+	IntezerCommunity 1.0
+	DNSDB_IPHistory 2.0
+	Ldap_Query 2.0
+	PaloAltoNGFW_unblock_internal_domain 1.0.0
+	GoogleSafebrowsing 2.0
+	PassiveTotal_Enrichment 2.0
+	PayloadSecurity_File_Analysis 1.0
+	Triage 1.0
+	Msg_Parser 3.0
+	DomainMailSPFDMARC_Analyzer 1.1
+	PassiveTotal_Unique_Resolutions 2.0
+	Splunk_Search_User 3.0
+	CuckooSandbox_Url_Analysis 1.2
+	BackscatterIO_Enrichment 1.0
+	DomainTools_ReverseWhois 2.0
+	SophosIntelix_Submit_Static 0.1
+	Threatcrowd 1.0
+	Umbrella_Blacklister 1.1
+	ZEROFOX_Takedown_request 1.0
+	CyberCrime-Tracker 1.0
+	Gmail_DeleteMessage 1.0
+	EmailRep 1.0
+	URLhaus 2.0
+	MISP 2.1
+	TeamCymruMHR 1.0
+	DShield_lookup 1.0
+	EmergingThreats_MalwareInfo 1.0
+	StopForumSpam 1.0
+	DomainTools_HostingHistory 2.0
+	CyberChef_FromBase64 1.0
+	Abuse_Finder 3.0
+	Investigate_Categorization 1.0
+	SecurityTrails_Whois 1.0
+	DomainTools_WhoisHistory 2.0
+	MetaDefenderCloud_Scan 1.0
+	PassiveTotal_Ssl_Certificate_History 2.0
+	Splunk_Search_Other 3.0
+	Malpedia 1.0
+	MetaDefenderCore_Scan 1.0
+	Splunk_Search_Registry 3.0
+	Crt_sh_Transparency_Logs 1.0
+	IPinfo_Details 1.0
+	CERTatPassiveDNS 2.0
+	Urlscan.io_Scan 0.1.0
+	DomainToolsIris_CheckMaliciousTags 1.0
+	ProofPoint_Lookup 1.0
+	PayloadSecurity_Url_Analysis 1.0
+	Shodan_DNSResolve 1.0
+	Splunk_Search_Mail_Subject 3.0
+	VMRay 4.1
+	GoogleDNS_resolve 1.0.0
+	DomainToolsIris_Pivot 1.0
+	MetaDefenderCloud_GetReport 1.0
+	OpenCTI_SearchExactObservable 2.0
+	Hipposcore 2.0
+	Shodan_InfoDomain 1.0
+	CuckooSandbox_File_Analysis_Inet 1.2
+	DNS_Lookingglass 1.0
+	JoeSandbox_File_Analysis_Noinet 2.0
+	GoogleVisionAPI_WebDetection 1.0.0
+	Valhalla_GetRuleMatches 0.3.1
+	TalosReputation 1.0
+	Vulners_CVE 1.0
+	Splunk_Search_IP 3.0
+	TorBlutmagie 1.0
+	SpamAssassin 1.0
+	Splunk_Search_Domain_FQDN 3.0
+	FireHOLBlocklists 2.0
+	Vulners_IOC 1.0
+	NERD 1.0
+	ThreatGrid 1.0
+	Robtex_Reverse_PDNS_Query 1.0
+	Gmail_UnblockDomain 1.0
+	PassiveTotal_Ssl_Certificate_Details 2.0
+	PaloAltoNGFW_block_internal_user 1.0.0
+	AMPforEndpoints_IsolationStart 1.0
+	Hashdd_Status 2.0
+	PaloAltoNGFW_unblock_port_for_external_communication 1.0.0
+	PaloAltoNGFW_unblock_internal_IP_address 1.0.0
+	DNSDB_NameHistory 2.0
+	PhishingInitiative_Lookup 2.0
+	AMPforEndpoints_IsolationStop 1.0
+	SoltraEdge 1.0
+	Pulsedive_GetIndicator 1.0
+	QRadar_Auto_Closing_Offense 1.0
+	IBMXForce_Lookup 1.0
+	Gmail_UnblockSender 1.0
+	Splunk_Search_URL_URI_Path 3.0
+	IVRE 1.0
+	JoeSandbox_Url_Analysis 2.0
+	GreyNoise 3.1
+	Censys 1.0
+	Malwares_Scan 1.0
+	Robtex_IP_Query 1.0
+	HippoMore 2.0
+	PaloAltoNGFW_unblock_external_user 1.0.0
+	HybridAnalysis_GetReport 1.0
+	DuoLockUserAccount 1.0
+	AMPforEndpoints_SCDRemove 1.0
+	ClamAV_FileInfo 1.1
+	PaloAltoNGFW_block_port_for_internal_communication 2.0.0
+	ForcepointWebsensePing 1.0
+	Shodan_Search 2.0
+	Umbrella_Report 1.0
+	PassiveTotal_Components 2.0
+	AzureTokenRevoker 1.0
+	MetaDefenderCore_GetReport 1.0
+	Diario_GetReport 1.0
+	MalwareClustering_Search 1.0
+	Mnemonic_pDNS_Closed 3.0
+	Splunk_Search_File_Filename 3.0
+	UnshortenLink 1.2
+	Onyphe_Summary 1.0
+	AnyRun_Sandbox_Analysis 1.0
+
+2022-05-18 13:52:20,657 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-5 - Creating HTTP client on http://172.18.0.2:9200
+2022-05-18 13:52:21,234 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-5 - Search error
+com.sksamuel.elastic4s.http.JavaClientExceptionWrapper: java.net.ConnectException: Connection refused
+	at com.sksamuel.elastic4s.http.JavaClient$$anon$1.onFailure(JavaClient.scala:69)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onDefinitiveFailure(RestClient.java:617)
+	at org.elasticsearch.client.RestClient$1.failed(RestClient.java:375)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.executionFailed(DefaultClientExchangeHandlerImpl.java:101)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.failed(AbstractClientExchangeHandler.java:426)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.connectionRequestFailed(AbstractClientExchangeHandler.java:348)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.access$100(AbstractClientExchangeHandler.java:62)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler$1.failed(AbstractClientExchangeHandler.java:392)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager$1.failed(PoolingNHttpClientConnectionManager.java:316)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.nio.pool.RouteSpecificPool.failed(RouteSpecificPool.java:162)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestFailed(AbstractNIOConnPool.java:609)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.failed(AbstractNIOConnPool.java:889)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.failed(SessionRequestImpl.java:162)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:176)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	... 5 common frames omitted
+2022-05-18 13:52:21,346 [INFO] from org.thp.cortex.services.DockerJobRunnerSrv in main - Docker is available:
+Info{architecture=x86_64, clusterStore=null, cgroupDriver=systemd, containers=7, containersRunning=6, containersStopped=1, containersPaused=0, cpuCfsPeriod=true, cpuCfsQuota=true, debug=false, dockerRootDir=/var/lib/docker, storageDriver=overlay2, driverStatus=[[Backing Filesystem, extfs], [Supports d_type, true], [Native Overlay Diff, true], [userxattr, false]], executionDriver=null, experimentalBuild=false, httpProxy=, httpsProxy=, id=NB37:VBGD:SZDF:CXXO:2Q25:ARQK:Q6EW:4BDC:NGLF:I37V:PLRJ:NW7P, ipv4Forwarding=true, images=33, indexServerAddress=https://index.docker.io/v1/, initPath=null, initSha1=null, kernelMemory=false, kernelVersion=5.17.5-76051705-generic, labels=[], memTotal=8069627904, memoryLimit=true, cpus=8, eventsListener=1, fileDescriptors=124, goroutines=120, name=anonymous, noProxy=, oomKillDisable=false, operatingSystem=Pop!_OS 22.04 LTS, osType=linux, plugins=Plugins{volumes=[local], networks=[bridge, host, ipvlan, macvlan, null, overlay]}, registryConfig=RegistryConfig{indexConfigs={docker.io=IndexConfig{name=docker.io, mirrors=[], secure=true, official=true}}, insecureRegistryCidrs=[127.0.0.0/8]}, serverVersion=20.10.12, swapLimit=true, swarm=SwarmInfo{cluster=null, controlAvailable=false, error=, localNodeState=inactive, nodeAddr=, nodeId=, nodes=null, managers=null, remoteManagers=null}, systemStatus=[], systemTime=Wed May 18 13:52:20 UTC 2022}
+2022-05-18 13:52:21,386 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python hasn't been found
+2022-05-18 13:52:21,389 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python2 hasn't been found
+2022-05-18 13:52:21,392 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python3 hasn't been found
+2022-05-18 13:52:21,400 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-5 - Search error
+com.sksamuel.elastic4s.http.JavaClientExceptionWrapper: java.net.ConnectException: Connection refused
+	at com.sksamuel.elastic4s.http.JavaClient$$anon$1.onFailure(JavaClient.scala:69)
+	at org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onDefinitiveFailure(RestClient.java:617)
+	at org.elasticsearch.client.RestClient$1.failed(RestClient.java:375)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.executionFailed(DefaultClientExchangeHandlerImpl.java:101)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.failed(AbstractClientExchangeHandler.java:426)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.connectionRequestFailed(AbstractClientExchangeHandler.java:348)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler.access$100(AbstractClientExchangeHandler.java:62)
+	at org.apache.http.impl.nio.client.AbstractClientExchangeHandler$1.failed(AbstractClientExchangeHandler.java:392)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager$1.failed(PoolingNHttpClientConnectionManager.java:316)
+	at org.apache.http.concurrent.BasicFuture.failed(BasicFuture.java:137)
+	at org.apache.http.nio.pool.RouteSpecificPool.failed(RouteSpecificPool.java:162)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestFailed(AbstractNIOConnPool.java:609)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.failed(AbstractNIOConnPool.java:889)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.failed(SessionRequestImpl.java:162)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:176)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	... 5 common frames omitted
+2022-05-18 13:52:21,484 [INFO] from play.api.Play in main - Application started (Prod) (no global state)
+2022-05-18 13:52:22,149 [INFO] from play.core.server.AkkaHttpServer in main - Enabling HTTP/2 on Akka HTTP server...
+2022-05-18 13:52:22,150 [INFO] from play.core.server.AkkaHttpServer in main - Listening for HTTP on /0.0.0.0:9001
+2022-05-18 13:52:53,997 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-11 - ElasticSearch request failure: POST:/cortex_6/_search?scroll=60000ms
+StringEntity({"seq_no_primary_term":"true","query":{"bool":{"must":[{"term":{"relations":{"value":"user"}}},{"term":{"status":{"value":"Ok"}}}]}},"from":0,"sort":[{"_doc":{"order":"desc"}}]},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:52:53,999 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-13 - Search error
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:52:54,005 [ERROR] from org.elastic4play.services.auth.MultiAuthSrv in application-akka.actor.default-dispatcher-13 - Authentication failure
+org.elastic4play.AuthenticationError: Authentication using API key is not supported
+	at org.elastic4play.services.AuthSrv.authenticate(UserSrv.scala:48)
+	at org.elastic4play.services.AuthSrv.authenticate$(UserSrv.scala:47)
+	at org.thp.cortex.services.LocalAuthSrv.authenticate(LocalAuthSrv.scala:19)
+	at org.elastic4play.services.auth.MultiAuthSrv.$anonfun$authenticate$3(MultiAuthSrv.scala:58)
+	at org.elastic4play.services.auth.MultiAuthSrv$$anonfun$$nestedInanonfun$forAllAuthProvider$1$1.applyOrElse(MultiAuthSrv.scala:43)
+	at org.elastic4play.services.auth.MultiAuthSrv$$anonfun$$nestedInanonfun$forAllAuthProvider$1$1.applyOrElse(MultiAuthSrv.scala:41)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:52:54,046 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-13 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"query":{"match":{"relations":{"query":"user"}}},"size":0},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:52:54,073 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-13 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"seq_no_primary_term":"true","query":{"ids":{"values":["init"]}},"size":1},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:52:54,090 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-13 - GET /api/user/current returned 520
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:53:54,194 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-18 - ElasticSearch request failure: POST:/cortex_6/_search?scroll=60000ms
+StringEntity({"seq_no_primary_term":"true","query":{"bool":{"must":[{"term":{"relations":{"value":"user"}}},{"term":{"status":{"value":"Ok"}}}]}},"from":0,"sort":[{"_doc":{"order":"desc"}}]},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:53:54,195 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-14 - Search error
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:53:54,195 [ERROR] from org.elastic4play.services.auth.MultiAuthSrv in application-akka.actor.default-dispatcher-18 - Authentication failure
+org.elastic4play.AuthenticationError: Authentication using API key is not supported
+	at org.elastic4play.services.AuthSrv.authenticate(UserSrv.scala:48)
+	at org.elastic4play.services.AuthSrv.authenticate$(UserSrv.scala:47)
+	at org.thp.cortex.services.LocalAuthSrv.authenticate(LocalAuthSrv.scala:19)
+	at org.elastic4play.services.auth.MultiAuthSrv.$anonfun$authenticate$3(MultiAuthSrv.scala:58)
+	at org.elastic4play.services.auth.MultiAuthSrv$$anonfun$$nestedInanonfun$forAllAuthProvider$1$1.applyOrElse(MultiAuthSrv.scala:43)
+	at org.elastic4play.services.auth.MultiAuthSrv$$anonfun$$nestedInanonfun$forAllAuthProvider$1$1.applyOrElse(MultiAuthSrv.scala:41)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:53:54,200 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-18 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"query":{"match":{"relations":{"query":"user"}}},"size":0},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:53:54,205 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-18 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"seq_no_primary_term":"true","query":{"ids":{"values":["init"]}},"size":1},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:53:54,206 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-18 - GET /api/user/current returned 520
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:56:17,107 [INFO] from org.reflections.Reflections in main - Reflections took 122 ms to scan 2 urls, producing 99 keys and 968 values 
+2022-05-18 13:56:17,155 [INFO] from module in main - Loading model class org.thp.cortex.models.WorkerModel
+2022-05-18 13:56:17,159 [INFO] from module in main - Loading model class org.thp.cortex.models.AuditModel
+2022-05-18 13:56:17,159 [INFO] from module in main - Loading model class org.thp.cortex.models.UserModel
+2022-05-18 13:56:17,160 [INFO] from module in main - Loading model class org.elastic4play.services.DBListModel
+2022-05-18 13:56:17,160 [INFO] from module in main - Loading model class org.thp.cortex.models.WorkerConfigModel
+2022-05-18 13:56:17,160 [INFO] from module in main - Loading model class org.thp.cortex.models.ReportModel
+2022-05-18 13:56:17,160 [INFO] from module in main - Loading model class org.thp.cortex.models.ArtifactModel
+2022-05-18 13:56:17,161 [INFO] from module in main - Loading model class org.thp.cortex.models.JobModel
+2022-05-18 13:56:17,161 [INFO] from module in main - Loading model class org.thp.cortex.models.OrganizationModel
+2022-05-18 13:56:17,161 [INFO] from module in main - Loading model class org.elastic4play.services.AttachmentModel
+2022-05-18 13:56:17,168 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.OAuth2Srv
+2022-05-18 13:56:17,169 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.LocalAuthSrv
+2022-05-18 13:56:17,169 [INFO] from module in main - Loading authentication module class org.elastic4play.services.auth.LdapAuthSrv
+2022-05-18 13:56:17,169 [INFO] from module in main - Loading authentication module class org.thp.cortex.services.KeyAuthSrv
+2022-05-18 13:56:17,169 [INFO] from module in main - Loading authentication module class org.elastic4play.services.auth.ADAuthSrv
+2022-05-18 13:56:18,886 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-4 - Slf4jLogger started
+2022-05-18 13:56:21,577 [INFO] from org.thp.cortex.services.WorkerSrv in application-akka.actor.default-dispatcher-5 - New worker list:
+
+	IPVoid 1.0
+	SEKOIAIntelligenceCenter_Indicators 1.0
+	Shuffle 1.0
+	SEKOIAIntelligenceCenter_Context 1.0
+	HIBP_Query 2.0
+	CheckPoint_Unlock 1.0
+	DNSSinkhole 1.0
+	DomainToolsIris_Investigate 1.0
+	Autofocus_SearchJSON 1.0
+	DomainTools_Reputation 2.0
+	VirusTotal_GetReport 3.0
+	AMPforEndpoints_SCDAdd 1.0
+	MaxMind_GeoIP 4.0
+	Crowdstrike_Falcon_Custom_IOC_API 1.0
+	FileInfo 8.0
+	PaloAltoNGFW_block_external_user 1.0.0
+	CheckPoint_Lock 1.0
+	FireEyeiSight 1.0
+	Malwares_GetReport 1.0
+	Mnemonic_pDNS_Public 3.0
+	THOR_Thunderstorm_ScanSample 0.3.1
+	VirusTotal_Rescan 3.0
+	DomainTools_Risk 2.0
+	PassiveTotal_Osint 2.0
+	CIRCLPassiveDNS 2.0
+	CyberChef_FromHex 1.0
+	PaloAltoNGFW_block_port_for_external_communication 2.0.0
+	PassiveTotal_Passive_Dns 2.1
+	Shodan_Host 1.0
+	SendGrid 1.0
+	DomainTools_WhoisLookupUnparsed 2.0
+	Hashdd_Detail 2.0
+	PassiveTotal_Host_Pairs 2.0
+	Hunterio_DomainSearch 1.0
+	CyberChef_FromCharCode 1.0
+	MISPWarningLists 2.0
+	Gmail_BlockDomain 1.0
+	DomainTools_ReverseIPWhois 2.0
+	AbuseIPDB 1.0
+	TorProject 1.0
+	Redmine_Issue 1.0
+	CIRCLPassiveSSL 2.0
+	Inoitsu 1.0
+	Fortiguard_URLCategory 2.1
+	Splunk_Search_User_Agent 3.0
+	Yara 2.0
+	EmergingThreats_DomainInfo 1.0
+	DNSDB_DomainName 2.0
+	PhishTank_CheckURL 2.1
+	DNS-RPZ 1.0
+	MailIncidentStatus 1.0
+	CIRCLHashlookup 1.0
+	PaloAltoNGFW_block_internal_domain 2.0.0
+	StamusNetworks_HostID 1.0
+	IPinfo_Hosted_Domains 1.0
+	SpamhausDBL 1.0
+	SophosIntelix_GetReport 0.3
+	PassiveTotal_Trackers 2.0
+	ThreatResponse 1.0
+	VirusTotal_DownloadSample 3.0
+	Gmail_BlockSender 1.0
+	Maltiverse_Report 1.0
+	SophosIntelix_Submit_Dynamic 0.1
+	BackscatterIO_GetObservations 1.0
+	OTXQuery 2.0
+	Investigate_Sample 1.0
+	PaloAltoNGFW_unblock_port_for_internal_communication 1.0.0
+	MetaDefenderCloud_Reputation 1.0
+	Autofocus_SearchIOC 1.0
+	Splunk_Search_Mail_Email 3.0
+	LastInfoSec 1.0
+	Patrowl_GetReport 1.0
+	NSRL 1.0
+	AMPforEndpoints_MoveGUID 1.0
+	RT4-CreateTicket 1.0
+	PhishingInitiative_Scan 1.0
+	Mailer 1.0
+	C1fApp 1.0
+	Diario_Scan 1.0
+	RecordedFuture_risk 1.0
+	OpenCTI_SearchObservables 2.0
+	Nessus 2.0
+	KnowBe4 1.0
+	SecurityTrails_Passive_DNS 1.0
+	JoeSandbox_File_Analysis_Inet 2.0
+	Virusshare 2.0
+	Velociraptor_Flow 0.1
+	EmlParser 2.0
+	DomainTools_ReverseIP 2.0
+	Yeti 1.0
+	StaxxSearch 1.0
+	PaloAltoNGFW_unblock_external_domain 1.0.0
+	SinkDB 1.1
+	PaloAltoNGFW_unblock_external_IP_address 1.0.0
+	MalwareBazaar 1.0
+	DomainToolsIris_AddRiskyDNSTag 1.0
+	Robtex_Forward_PDNS_Query 1.0
+	WOT_Lookup 2.0
+	Elasticsearch_Analysis 1.0
+	Splunk_Search_Hash 3.0
+	Autofocus_GetSampleAnalysis 1.0
+	Virustotal_Downloader 0.1
+	DuoUnlockUserAccount 1.0
+	PaloAltoNGFW_unblock_internal_user 1.0.0
+	VirusTotal_Scan 3.0
+	EmergingThreats_IPInfo 1.0
+	Shodan_ReverseDNS 1.0
+	Shodan_Host_History 1.0
+	Wazuh 1.0
+	PassiveTotal_Whois_Details 2.0
+	Urlscan.io_Search 0.1.1
+	PaloAltoNGFW_block_external_IP_address 2.0.0
+	DomainTools_WhoisLookup 2.0
+	PaloAltoNGFW_block_internal_IP_address 2.0.0
+	GRR 0.1
+	Cyberprotect_ThreatScore 3.0
+	PaloAltoNGFW_block_external_domain 2.0.0
+	ZEROFOX_Close_alert 1.0
+	Minemeld 1.0
+	PassiveTotal_Malware 2.0
+	DomainTools_ReverseNameServer 2.0
+	IntezerCommunity 1.0
+	DNSDB_IPHistory 2.0
+	Ldap_Query 2.0
+	PaloAltoNGFW_unblock_internal_domain 1.0.0
+	GoogleSafebrowsing 2.0
+	PassiveTotal_Enrichment 2.0
+	PayloadSecurity_File_Analysis 1.0
+	Triage 1.0
+	Msg_Parser 3.0
+	DomainMailSPFDMARC_Analyzer 1.1
+	PassiveTotal_Unique_Resolutions 2.0
+	Splunk_Search_User 3.0
+	CuckooSandbox_Url_Analysis 1.2
+	BackscatterIO_Enrichment 1.0
+	DomainTools_ReverseWhois 2.0
+	SophosIntelix_Submit_Static 0.1
+	Threatcrowd 1.0
+	Umbrella_Blacklister 1.1
+	ZEROFOX_Takedown_request 1.0
+	CyberCrime-Tracker 1.0
+	Gmail_DeleteMessage 1.0
+	EmailRep 1.0
+	URLhaus 2.0
+	MISP 2.1
+	TeamCymruMHR 1.0
+	DShield_lookup 1.0
+	EmergingThreats_MalwareInfo 1.0
+	StopForumSpam 1.0
+	DomainTools_HostingHistory 2.0
+	CyberChef_FromBase64 1.0
+	Abuse_Finder 3.0
+	Investigate_Categorization 1.0
+	SecurityTrails_Whois 1.0
+	DomainTools_WhoisHistory 2.0
+	MetaDefenderCloud_Scan 1.0
+	PassiveTotal_Ssl_Certificate_History 2.0
+	Splunk_Search_Other 3.0
+	Malpedia 1.0
+	MetaDefenderCore_Scan 1.0
+	Splunk_Search_Registry 3.0
+	Crt_sh_Transparency_Logs 1.0
+	IPinfo_Details 1.0
+	CERTatPassiveDNS 2.0
+	Urlscan.io_Scan 0.1.0
+	DomainToolsIris_CheckMaliciousTags 1.0
+	ProofPoint_Lookup 1.0
+	PayloadSecurity_Url_Analysis 1.0
+	Shodan_DNSResolve 1.0
+	Splunk_Search_Mail_Subject 3.0
+	VMRay 4.1
+	GoogleDNS_resolve 1.0.0
+	DomainToolsIris_Pivot 1.0
+	MetaDefenderCloud_GetReport 1.0
+	OpenCTI_SearchExactObservable 2.0
+	Hipposcore 2.0
+	Shodan_InfoDomain 1.0
+	CuckooSandbox_File_Analysis_Inet 1.2
+	DNS_Lookingglass 1.0
+	JoeSandbox_File_Analysis_Noinet 2.0
+	GoogleVisionAPI_WebDetection 1.0.0
+	Valhalla_GetRuleMatches 0.3.1
+	TalosReputation 1.0
+	Vulners_CVE 1.0
+	Splunk_Search_IP 3.0
+	TorBlutmagie 1.0
+	SpamAssassin 1.0
+	Splunk_Search_Domain_FQDN 3.0
+	FireHOLBlocklists 2.0
+	Vulners_IOC 1.0
+	NERD 1.0
+	ThreatGrid 1.0
+	Robtex_Reverse_PDNS_Query 1.0
+	Gmail_UnblockDomain 1.0
+	PassiveTotal_Ssl_Certificate_Details 2.0
+	PaloAltoNGFW_block_internal_user 1.0.0
+	AMPforEndpoints_IsolationStart 1.0
+	Hashdd_Status 2.0
+	PaloAltoNGFW_unblock_port_for_external_communication 1.0.0
+	PaloAltoNGFW_unblock_internal_IP_address 1.0.0
+	DNSDB_NameHistory 2.0
+	PhishingInitiative_Lookup 2.0
+	AMPforEndpoints_IsolationStop 1.0
+	SoltraEdge 1.0
+	Pulsedive_GetIndicator 1.0
+	QRadar_Auto_Closing_Offense 1.0
+	IBMXForce_Lookup 1.0
+	Gmail_UnblockSender 1.0
+	Splunk_Search_URL_URI_Path 3.0
+	IVRE 1.0
+	JoeSandbox_Url_Analysis 2.0
+	GreyNoise 3.1
+	Censys 1.0
+	Malwares_Scan 1.0
+	Robtex_IP_Query 1.0
+	HippoMore 2.0
+	PaloAltoNGFW_unblock_external_user 1.0.0
+	HybridAnalysis_GetReport 1.0
+	DuoLockUserAccount 1.0
+	AMPforEndpoints_SCDRemove 1.0
+	ClamAV_FileInfo 1.1
+	PaloAltoNGFW_block_port_for_internal_communication 2.0.0
+	ForcepointWebsensePing 1.0
+	Shodan_Search 2.0
+	Umbrella_Report 1.0
+	PassiveTotal_Components 2.0
+	AzureTokenRevoker 1.0
+	MetaDefenderCore_GetReport 1.0
+	Diario_GetReport 1.0
+	MalwareClustering_Search 1.0
+	Mnemonic_pDNS_Closed 3.0
+	Splunk_Search_File_Filename 3.0
+	UnshortenLink 1.2
+	Onyphe_Summary 1.0
+	AnyRun_Sandbox_Analysis 1.0
+
+2022-05-18 13:56:21,805 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-5 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:56:22,061 [INFO] from org.thp.cortex.services.DockerJobRunnerSrv in main - Docker is available:
+Info{architecture=x86_64, clusterStore=null, cgroupDriver=systemd, containers=4, containersRunning=4, containersStopped=0, containersPaused=0, cpuCfsPeriod=true, cpuCfsQuota=true, debug=false, dockerRootDir=/var/lib/docker, storageDriver=overlay2, driverStatus=[[Backing Filesystem, extfs], [Supports d_type, true], [Native Overlay Diff, true], [userxattr, false]], executionDriver=null, experimentalBuild=false, httpProxy=, httpsProxy=, id=NB37:VBGD:SZDF:CXXO:2Q25:ARQK:Q6EW:4BDC:NGLF:I37V:PLRJ:NW7P, ipv4Forwarding=true, images=33, indexServerAddress=https://index.docker.io/v1/, initPath=null, initSha1=null, kernelMemory=false, kernelVersion=5.17.5-76051705-generic, labels=[], memTotal=8069627904, memoryLimit=true, cpus=8, eventsListener=1, fileDescriptors=89, goroutines=88, name=anonymous, noProxy=, oomKillDisable=false, operatingSystem=Pop!_OS 22.04 LTS, osType=linux, plugins=Plugins{volumes=[local], networks=[bridge, host, ipvlan, macvlan, null, overlay]}, registryConfig=RegistryConfig{indexConfigs={docker.io=IndexConfig{name=docker.io, mirrors=[], secure=true, official=true}}, insecureRegistryCidrs=[127.0.0.0/8]}, serverVersion=20.10.12, swapLimit=true, swarm=SwarmInfo{cluster=null, controlAvailable=false, error=, localNodeState=inactive, nodeAddr=, nodeId=, nodes=null, managers=null, remoteManagers=null}, systemStatus=[], systemTime=Wed May 18 13:56:21 UTC 2022}
+2022-05-18 13:56:22,087 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python hasn't been found
+2022-05-18 13:56:22,089 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python2 hasn't been found
+2022-05-18 13:56:22,091 [WARN] from org.thp.cortex.services.JobRunnerSrv in main - The package cortexutils for python3 hasn't been found
+2022-05-18 13:56:22,202 [INFO] from play.api.Play in main - Application started (Prod) (no global state)
+2022-05-18 13:56:22,233 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-6 - ElasticSearch request failure: POST:/cortex_6/_search?scroll=60000ms
+StringEntity({"seq_no_primary_term":"true","query":{"bool":{"must":[{"term":{"relations":{"value":"job"}}},{"term":{"status":{"value":"Waiting"}}}]}},"from":0,"sort":[{"_doc":{"order":"desc"}}]},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:56:22,233 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-4 - ElasticSearch request failure: POST:/cortex_6/_search?scroll=60000ms
+StringEntity({"seq_no_primary_term":"true","query":{"bool":{"must":[{"term":{"relations":{"value":"worker"}}},{"match_all":{}}]}},"from":0,"sort":[{"_doc":{"order":"desc"}}]},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:56:22,243 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-6 - Search error
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:56:22,243 [WARN] from org.elastic4play.database.SearchWithScroll in application-akka.actor.default-dispatcher-8 - Search error
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:56:22,987 [INFO] from play.core.server.AkkaHttpServer in main - Enabling HTTP/2 on Akka HTTP server...
+2022-05-18 13:56:22,988 [INFO] from play.core.server.AkkaHttpServer in main - Listening for HTTP on /0.0.0.0:9001
+2022-05-18 13:58:49,035 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-15 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"query":{"match":{"relations":{"query":"user"}}},"size":0},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:58:49,053 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-15 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"seq_no_primary_term":"true","query":{"ids":{"values":["init"]}},"size":1},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:58:49,064 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-15 - GET /api/user/current returned 520
+org.elastic4play.IndexNotFoundException$: null
+	at org.elastic4play.IndexNotFoundException$.<clinit>(Errors.scala)
+	at org.elastic4play.database.DBConfiguration.$anonfun$execute$2(DBConfiguration.scala:155)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:58:49,159 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-15 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"query":{"match":{"relations":{"query":"user"}}},"size":0},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:58:49,192 [ERROR] from org.elastic4play.database.DBConfiguration in application-akka.actor.default-dispatcher-15 - ElasticSearch request failure: POST:/cortex_6/_search?
+StringEntity({"query":{"match":{"relations":{"query":"user"}}},"size":0},Some(application/json))
+ => ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,List(ElasticError(index_not_found_exception,no such index [cortex_6],Some(_na_),Some(cortex_6),None,null,None,None,None,List())),None,None,None,List())
+2022-05-18 13:58:50,153 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-14 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:58:50,159 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-14 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:58:50,165 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-14 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:58:50,169 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-14 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:58:50,173 [INFO] from com.sksamuel.elastic4s.http.JavaClient$ in application-akka.actor.default-dispatcher-14 - Creating HTTP client on http://172.20.0.2:9200
+2022-05-18 13:58:50,179 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Create a new empty database
+2022-05-18 13:58:50,180 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrate database from version 0, add operations for version 2
+2022-05-18 13:58:50,188 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrate database from version 0, add operations for version 3
+2022-05-18 13:58:50,188 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrate database from version 0, add operations for version 4
+2022-05-18 13:58:50,189 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrate database from version 0, add operations for version 5
+2022-05-18 13:58:50,189 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrate database from version 0, add operations for version 6
+2022-05-18 13:58:50,634 [WARN] from org.elasticsearch.client.RestClient in I/O dispatcher 1 - request [PUT http://172.20.0.2:9200/cortex_6?include_type_name=false] returned 1 warnings: [299 Elasticsearch-7.17.1-e5acb99f822233d62d6444ce45a4543dc1c8059a "[types removal] Using include_type_name in create index requests is deprecated. The parameter will be removed in the next major version."]
+2022-05-18 13:58:50,646 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from sequence
+2022-05-18 13:58:50,680 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from artifact
+2022-05-18 13:58:50,682 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from audit
+2022-05-18 13:58:50,686 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from data
+2022-05-18 13:58:50,688 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from dblist
+2022-05-18 13:58:50,690 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from job
+2022-05-18 13:58:50,693 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from organization
+2022-05-18 13:58:50,695 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from report
+2022-05-18 13:58:50,697 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from user
+2022-05-18 13:58:50,699 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from worker
+2022-05-18 13:58:50,702 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-14 - Migrating 0 entities from workerConfig
+2022-05-18 13:58:51,534 [INFO] from org.elastic4play.services.MigrationSrv in application-akka.actor.default-dispatcher-12 - End of migration
+2022-05-18 13:59:21,081 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-17 - GET /api/stream/7FuySFUoBG returned 401
+org.elastic4play.AuthenticationError: Authentication header not found
+	at org.elastic4play.controllers.Authenticated.$anonfun$getFromApiKey$1(Authenticated.scala:143)
+	at scala.Option.fold(Option.scala:251)
+	at org.elastic4play.controllers.Authenticated.getFromApiKey(Authenticated.scala:143)
+	at org.thp.cortex.controllers.StreamCtrl$$anonfun$1.applyOrElse(StreamCtrl.scala:101)
+	at org.thp.cortex.controllers.StreamCtrl$$anonfun$1.applyOrElse(StreamCtrl.scala:101)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 13:59:21,604 [ERROR] from org.elastic4play.controllers.Authenticated in application-akka.actor.default-dispatcher-17 - Authentication failure:
+	session: AuthenticationError User session not found
+	pki: AuthenticationError Certificate authentication is not configured
+	key: AuthenticationError Authentication header not found
+	init: AuthenticationError Use of initial user is forbidden because users exist in database
+2022-05-18 13:59:21,605 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-17 - GET /api/user/current returned 401
+org.elastic4play.AuthenticationError: Authentication failure
+	at org.elastic4play.controllers.Authenticated.$anonfun$getContext$4(Authenticated.scala:272)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)
+2022-05-18 14:07:58,231 [ERROR] from org.elastic4play.controllers.Authenticated in application-akka.actor.default-dispatcher-50 - Authentication failure:
+	session: AuthenticationError User session not found
+	pki: AuthenticationError Certificate authentication is not configured
+	key: AuthenticationError Authentication header not found
+	init: AuthenticationError Use of initial user is forbidden because users exist in database
+2022-05-18 14:07:58,232 [INFO] from org.thp.cortex.services.ErrorHandler in application-akka.actor.default-dispatcher-50 - GET /api/user/current returned 401
+org.elastic4play.AuthenticationError: Authentication failure
+	at org.elastic4play.controllers.Authenticated.$anonfun$getContext$4(Authenticated.scala:272)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:56)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:93)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:93)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:48)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:48)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175)

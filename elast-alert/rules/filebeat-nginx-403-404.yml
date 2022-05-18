@@ -25,20 +25,12 @@ include: ["timestamp","http.response.status_code","url","user_agent.name","sourc
 alert_text: "Alerts on the Filebeat Nginx 403 or 404 error.\n"
 alert_text_args: ["timestamp","status_code","url","user_agent.name","source"]
 
-
-# (Required)
-# The alert is use when a match is found
-#alert:
-#- "telegram"
-#telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
-#telegram_room_id: "@Filebeat"
-
 alert: hivealerter
 
 hive_connection:
   hive_host: http://thehive
   hive_port: 9000
-  hive_apikey: +rXSESD4UagRcLqrmLeBtt60/uHObFZH
+  hive_apikey: 11NfuHO3rK55VxmSNfRRLpwT34avxsE8
   #hive_proxies:
   #  http: ''
   #  https: ''
@@ -68,20 +60,15 @@ hive_observable_data_mapping:
 
 
 
-#alert: hivealerter
-#
-#hive_connection:
-#hive_host: http://thehive/
-#hive_port: 9000
-#hive_apikey: +rXSESD4UagRcLqrmLeBtt60/uHObFZH
-#
-#hive_alert_config:
-#  title: 'testing'
-#  type: 'external'
-#  source: 'elastalert'
-#  description: 'Sample description'
-#  severity: 2
-#  tags: ['tag1', 'test']
-#  tlp: 3
-#  status: 'New'
-#  follow: True
+
+
+
+
+
+
+#------------------------------------
+#Telegram
+#alert:
+#- "telegram"
+#telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
+#telegram_room_id: "@Filebeat"

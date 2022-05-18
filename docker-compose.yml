@@ -69,9 +69,9 @@ services:
       - ./cortex/application.conf:/etc/cortex/application.conf
       - '/var/run/docker.sock:/var/run/docker.sock'
       - ./cortex/log/:/var/log/cortex
-      - /tmp:/tmp
-      #- ./cortex/Cortex-Analyzers:/opt/cortex/analyzers
-      #- .cortex/Cortex-Analyzers/analyzers.json:/opt/cortex/analyzers/analyzers.json
+      #- /tmp:/tmp
+      - ./cortex/Cortex-Analyzers:/opt/cortex/analyzers
+      - ./cortex/Cortex-Analyzers/analyzers.json:/opt/cortex/analyzers/analyzers.json
     privileged: true
   
   #-------------------------------------u
@@ -87,8 +87,8 @@ services:
       - '9000:9000'
     volumes:
       - ./thehive/application.conf:/etc/thehive/application.conf
-      #- ./thehive/data:/opt/thp/thehive/data
-      #- ./thehive/index:/opt/thp/thehive/index
+      - ./thehive/data:/opt/thp/thehive/data
+      - ./thehive/index:/opt/thp/thehive/index
     command:
       --cortex-port 9001
       --cortex-keys ${CORTEX_KEY}
