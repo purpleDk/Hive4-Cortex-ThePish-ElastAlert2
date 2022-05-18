@@ -1,5 +1,5 @@
 # hive4-cortex-elastalert2-elk
-<h1 align="center">Building a environment with elasticsearch, alerting with elastalert2, send that alerts to The Hive, analyse with cortex<h1>
+Building a environment with elasticsearch, alerting with elastalert2, send that alerts to The Hive, analyse with cortex.
 
 ## If you want the default dashboards of the BEATS, you should run this commands on ubuntu machine:
 1. filebeat setup --dashboards
