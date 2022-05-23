@@ -1,5 +1,7 @@
 cassandra/
 cortex/log
 cortex/Cortex-Analyzers
+cortex/dockerfile
 thehive/data
 thehive/index
+

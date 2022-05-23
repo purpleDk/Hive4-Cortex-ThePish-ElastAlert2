@@ -64,14 +64,13 @@ services:
     command:
       --job-directory ${JOB_DIRECTORY}
     volumes:
-      - ./cortex/application.conf:/etc/cortex/application.conf
       - '/var/run/docker.sock:/var/run/docker.sock'
+      - ./cortex/application.conf:/etc/cortex/application.conf
+      - ./cortex/Cortex-Analyzers:/opt/Cortex-Analyzers
       - ./cortex/log/:/var/log/cortex
-      - ./cortex/Cortex-Analyzers:/opt/cortex/analyzers
-      - ./cortex/Cortex-Analyzers/analyzers.json:/opt/cortex/analyzers/analyzers.json
     privileged: true
   
-  #-------------------------------------u
+  #-------------------------------------
   thehive:
     container_name: thehive
     hostname: thehive
