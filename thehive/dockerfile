@@ -1,0 +1,7 @@
+FROM thehiveproject/thehive4:latest
+USER root
+RUN mkdir -p /opt/thp/thehive/index
+RUN mkdir -p /opt/thp/thehive/data
+RUN chown -R thehive:thehive /opt/thp/thehive/index
+RUN chown -R thehive:thehive /opt/thp/thehive/data
+USER thehive
