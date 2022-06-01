@@ -21,7 +21,7 @@ alert: hivealerter
 hive_connection:
   hive_host: http://thehive
   hive_port: 9000
-  hive_apikey: 11NfuHO3rK55VxmSNfRRLpwT34avxsE8
+  hive_apikey: UEFUpxPewFlQPD25sc/UcNuanDpBUBbv
   #hive_proxies:
   #  http: ''
   #  https: ''

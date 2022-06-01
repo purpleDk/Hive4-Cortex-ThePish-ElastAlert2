@@ -23,7 +23,12 @@ services:
       - IPC_LOCK
     volumes:
       - es-data:/usr/share/elasticsearch/data
-
+    healthcheck:
+      test: ["CMD","curl", "localhost:9200/_cat/health "]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    
   #-------------------------------------
   kibana:
     image: kibana:${STACK_VERSION}
@@ -38,16 +43,16 @@ services:
   
   #-------------------------------------
   cassandra:
-    container_name: cassandra
     image: cassandra:${CASSANDRA_VERSION}
-    restart: unless-stopped
+    container_name: cassandra
     hostname: cassandra
+    restart: unless-stopped
     environment:
       - MAX_HEAP_SIZE=1G
       - HEAP_NEWSIZE=1G
       - CASSANDRA_CLUSTER_NAME=thp
     volumes:
-      - cassandra-data:/var/lib/cassandra/data
+      - './vol/cassandra/data:/var/lib/cassandra/data'
   #-------------------------------------  
   cortex:
     #image: thehiveproject/cortex:latest
@@ -56,13 +61,14 @@ services:
     hostname: cortex
     restart: unless-stopped
     depends_on:
-      - elasticsearch
+      elasticsearch:
+        condition: service_healthy
     environment:
       - 'JOB_DIRECTORY=/opt/cortex/jobs'
     ports:
       - '9001:9001'
-    command:
-      --secret vnkGFUfXNiFhayhi3ZuqNK6j9LKdoFPK0UCz3rsVKxWg8JLhJhJPnVWLUkiFW3Nx
+    #command:
+    #  --secret vnkGFUfXNiFhayhi3ZuqNK6j9LKdoFPK0UCz3rsVKxWg8JLhJhJPnVWLUkiFW3Nx
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - ./cortex/application.conf:/etc/cortex/application.conf
@@ -70,47 +76,50 @@ services:
     privileged: true
   
   #-------------------------------------
-  thehive:
-    image: thehiveproject/thehive4:latest
+  thehive:  
+    #image: thehiveproject/thehive4:latest
     build: ./thehive
     container_name: thehive
     hostname: thehive
     restart: unless-stopped
     depends_on:
       - cassandra
+      - cortex
     ports:
       - '9000:9000'
     volumes:
       - ./thehive/application.conf:/etc/thehive/application.conf
+      - ./thehive/data:/opt/thp/thehive/data
+      - ./thehive/index:/opt/thp/thehive/index
     command:
       --cortex-port 9001
       --cortex-keys ${CORTEX_KEY}
+      
 
   #-------------------------------------    
   ubuntu:
+    image: ubuntu-nginx-beats:1.0
+    #build:./ubuntu
+    container_name: ubuntu
+    hostname: ubuntu_nginx
+    restart: always
     depends_on:
       - elasticsearch
       - kibana
-    container_name: ubuntu
-    hostname: ubuntu_nginx
     environment:
       - BEATS_STRICT_PERMS=false
-    #build:
-    #  context: ./ubuntu/
-    #  dockerfile: dockerfile
-    image: ubuntu-nginx-beats:1.0
-    restart: always
     ports:
       - "${NGINX_PORT}:${NGINX_PORT}"
     command: bash -c "./tmp/start.sh"
   
   #-------------------------------------
   ElasticAlert:
-    depends_on:
-      - elasticsearch
+    image: jertel/elastalert2:latest
     container_name: ElasticAlert2
     hostname: ElasticAlert2
-    image: jertel/elastalert2:latest
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
     volumes:
     - type: bind
       source: ./elast-alert/config.yaml
@@ -122,6 +131,4 @@ services:
 
 volumes:
   es-data:
-    driver: local
-  cassandra-data:
     driver: local
