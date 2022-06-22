@@ -36,7 +36,7 @@ hive_alert_config:
   severity: 1
   tlp: 4
   pap: 4
-  status: 'New'
+  #status: 'New'
   source: 'elastalert2'
   description: 'Trying to acess restricted area'
   tags: [host.ip,url]

@@ -1,0 +1,38 @@
+{
+	"AbuseIPDB_1_0" : {
+		"dataType" : ["ip"],
+		"levelMapping" : {
+			"malicious" : "malicious",
+			"suspicious" : "suspicious",
+			"safe" : "safe",
+			"info" : "info"
+		}
+	},
+	"Abuse_Finder_3_0" : {
+		"dataType" : ["ip", "domain", "fqdn", "url","mail"],
+		"levelMapping" : {
+			"malicious" : "malicious",
+			"suspicious" : "suspicious",
+			"safe" : "safe",
+			"info" : "info"
+		}
+	},
+	"VirusTotal_Scan_3_0" : {
+		"dataType" : ["file", "url"],
+		"levelMapping" : {
+			"malicious" : "malicious",
+			"suspicious" : "suspicious",
+			"safe" : "safe",
+			"info" : "info"
+		}
+	},
+	"VirusTotal_GetReport_3_0" : {
+		"dataType" : ["file", "hash","domain","fqdn","ip","url"],
+		"levelMapping" : {
+			"malicious" : "malicious",
+			"suspicious" : "suspicious",
+			"safe" : "safe",
+			"info" : "info"
+		}
+	}
+}

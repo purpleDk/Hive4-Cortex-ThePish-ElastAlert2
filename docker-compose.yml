@@ -67,8 +67,6 @@ services:
       - 'JOB_DIRECTORY=/opt/cortex/jobs'
     ports:
       - '9001:9001'
-    #command:
-    #  --secret vnkGFUfXNiFhayhi3ZuqNK6j9LKdoFPK0UCz3rsVKxWg8JLhJhJPnVWLUkiFW3Nx
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
       - ./cortex/application.conf:/etc/cortex/application.conf
@@ -128,6 +126,21 @@ services:
       source: ./elast-alert/rules
       target: /opt/elastalert/rules 
     restart: always
+ #-------------------------------------
+  thephish:
+    image: emalderson/thephish:latest
+    container_name: thephish
+    restart: unless-stopped
+    depends_on:
+      - thehive
+      - cortex
+    #  - misp
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./thephish_conf_files/analyzers_level_conf.json:/root/thephish/analyzers_level_conf.json
+      - ./thephish_conf_files/configuration.json:/root/thephish/configuration.json
+      - ./thephish_conf_files/whitelist.json:/root/thephish/whitelist.json
 
 volumes:
   es-data:
