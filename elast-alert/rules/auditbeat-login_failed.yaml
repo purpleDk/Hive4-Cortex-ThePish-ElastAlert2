@@ -27,12 +27,34 @@ filter:
 
 
 include: ["timestamp","event.action","event.outcome","source.ip","user.name"] # ,"url","user_agent.name","source"
-alert_text: "Alert, login failure attempt\n"
 alert_text_args: ["timestamp","event.action","event.outcome","source.ip","user.name"]
-      
-alert:
-- "telegram"
-telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
-telegram_room_id: "@Auditbeat"
+
+alert: hivealerter
+
+hive_connection:
+  hive_host: http://thehive
+  hive_port: 9000
+  hive_apikey: UEFUpxPewFlQPD25sc/UcNuanDpBUBbv
+  #hive_proxies:
+  #  http: ''
+  #  https: ''
+
+hive_alert_config:
+  customFields:
+    - name: Username_Login
+      type: string
+      value: user.name
+  title: 'Alert, login failure attempt'
+  follow: True
+  severity: 1
+  tlp: 4
+  pap: 4
+  #status: 'New'
+  source: 'elastalert2'
+  description: 'Trying to acess restricted area'
+  tags: [host.ip,url]
+  type: 'external'
 
 
+hive_observable_data_mapping:
+  - ip: source.ip

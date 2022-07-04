@@ -33,10 +33,30 @@ filter:
 ##alert_text_args: ["@timestamp", "host.name", "host.ip", system.cpu.total.pct] # system.load.1]
 ##alert_text_type: alert_text_only
 #
-#
-alert:
-- "telegram"
-telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
-telegram_room_id: "@Metricbeat"
 
+alert: hivealerter
+
+hive_connection:
+  hive_host: http://thehive
+  hive_port: 9000
+  hive_apikey: UEFUpxPewFlQPD25sc/UcNuanDpBUBbv
+  #hive_proxies:
+  #  http: ''
+  #  https: ''
+
+hive_alert_config:
+  title: 'Metric Beat CPU Spike'
+  follow: True
+  severity: 1
+  tlp: 4
+  pap: 4
+  #status: 'New'
+  source: 'elastalert2'
+  description: 'Metric Beat CPU Spike'
+  tags: [timestamp, host.name, system.cpu.total.pct]
+  type: 'external'
+
+
+hive_observable_data_mapping:
+  - ip: host.ip
 

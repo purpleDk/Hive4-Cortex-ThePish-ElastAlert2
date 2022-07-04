@@ -39,30 +39,10 @@ hive_alert_config:
   #status: 'New'
   source: 'elastalert2'
   description: 'Trying to acess restricted area'
-  tags: [host.ip,url]
+  tags: [timestamp, host]
   type: 'external'
 
 hive_observable_data_mapping:
-  #- domain: agent.hostname
-  #- domain: response.domain
+
   - domain: url
   - ip: source.ip
-
-
-
-
-
-
-
-
-
-
-
-
-
-#------------------------------------
-#Telegram
-#alert:
-#- "telegram"
-#telegram_bot_token: "5392144585:AAHY019JF-NibYNlEc9sOI_rzqSKiT6paDY"
-#telegram_room_id: "@Filebeat"
