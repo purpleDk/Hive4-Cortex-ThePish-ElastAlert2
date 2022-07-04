@@ -2,8 +2,8 @@
 	"imap" : {
 		"host" : "imap.gmail.com",
 		"port" : "993",
-		"user" : "example@gmail.com",
-		"password" : "example",
+		"user" : "user@gmail.com",
+		"password" : "password",
 		"folder" : "inbox"
 	},
 
